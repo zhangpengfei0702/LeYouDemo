@@ -1,0 +1,29 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: upload-service
+  servlet:
+    multipart:
+      max-file-size: 5Mb
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+
+ly:
+  upload:
+    diskpath: file:c:/zhangpengfei/upload/
+    path: c:/zhangpengfei/upload/
+    mappingpath: /upload/img/**
+    url: upload/img/
+    baseurl: http://www.api.leyou.com/api/
+    allowTypes:
+      - image/jpeg
+      - image/png
+      - image/bmp
